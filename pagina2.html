@@ -122,9 +122,15 @@
       <div class="section" role="group" aria-labelledby="doclabel">
         <h3 id="doclabel">Document type</h3>
         <div class="radios">
-          <label class="radio" for="doc_cpf"><input id="doc_cpf" name="doctype" type="radio" value="CPF" /> CPF</label>
-          <label class="radio" for="doc_rg"><input id="doc_rg" name="doctype" type="radio" value="RG" /> RG</label>
-          <label class="radio" for="doc_pass"><input id="doc_pass" name="doctype" type="radio" value="PASSPORT" /> Passport</label>
+          <label class="radio" for="doc_dl">
+            <input id="doc_dl" name="doctype" type="radio" value="DRIVERS_LICENSE" /> Driver’s License
+          </label>
+          <label class="radio" for="doc_pass">
+            <input id="doc_pass" name="doctype" type="radio" value="US_PASSPORT" /> U.S. Passport
+          </label>
+          <label class="radio" for="doc_id">
+            <input id="doc_id" name="doctype" type="radio" value="STATE_ID" /> State ID Card
+          </label>
         </div>
         <div id="err" class="error" role="alert">Select a document type to continue.</div>
       </div>
