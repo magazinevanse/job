@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pré-seleção – Pergunta 01</title>
-  <meta name="description" content="Página de pré-seleção para entrevista de emprego. Responda para seguir ao formulário." />
+  <title>Pre-selection – Question 01</title>
+  <meta name="description" content="Pre-selection page for job interview. Answer to proceed to the form." />
   <meta name="theme-color" content="#0ea5e9" />
-  <!-- Open Graph para prévia no Facebook -->
+  <!-- Open Graph for Facebook preview -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pré-seleção – Entrevista de Emprego" />
-  <meta property="og:description" content="Responda à pergunta e avance para o formulário oficial." />
+  <meta property="og:title" content="Pre-selection – Job Interview" />
+  <meta property="og:description" content="Answer the question to proceed to the official form." />
   <meta property="og:image" content="" />
   <meta property="og:url" content="" />
   <style>
@@ -96,35 +96,33 @@
 <body data-dest="https://presellemp.vercel.app/presell2.html">
   <main class="card" role="main" aria-labelledby="q1">
     <header class="header">
-      <span class="tag" aria-label="etiqueta">
-        <!-- ícone currículo -->
+      <span class="tag" aria-label="tag">
+        <!-- resume icon -->
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6"/><path d="M14 3v4a1 1 0 0 0 1 1h4" stroke="currentColor" stroke-width="1.6"/></svg>
-        Pré-seleção
+        Pre-selection
       </span>
-      <p class="subtitle">Responda abaixo para avançar ao formulário oficial.</p>
+      <p class="subtitle">Answer below to proceed to the official form.</p>
     </header>
 
     <section class="content">
       <div class="cta" role="group" aria-labelledby="q1">
-        <h2 id="q1" class="q">Você tem <u>7 horas por dia</u> para se dedicar à nossa empresa trabalhando em “Home Office”?<small>Selecione uma opção para seguir ao formulário.</small></h2>
+        <h2 id="q1" class="q">Do you have <u>7 hours a day</u> to dedicate to our company working from home?<small>Select an option to continue to the form.</small></h2>
         <div class="choices">
-          <!-- REMOVIDO target=\"_blank\" -->
-          <a id="ctaSim" class="btn" href="#" aria-label="Sim, tenho 7 horas por dia">✅ Sim</a>
-          <a id="ctaNao" class="btn" href="#" aria-label="Não, não tenho 7 horas por dia">❌ Não</a>
+          <a id="ctaSim" class="btn" href="#" aria-label="Yes, I have 7 hours a day">✅ Yes</a>
+          <a id="ctaNao" class="btn" href="#" aria-label="No, I don't have 7 hours a day">❌ No</a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <span>🔒 Seus dados serão usados apenas para esta seleção.</span>
-      <span>Suporte: <a href="mailto:trabalheconosco@facebook.com">trabalheconosco@facebook.com</a></span>
+      <span>🔒 Your data will be used only for this selection.</span>
+      <span>Support: <a href="mailto:trabalheconosco@facebook.com">trabalheconosco@facebook.com</a></span>
     </footer>
   </main>
 
   <noscript>
     <div style="max-width:980px;margin:12px auto;color:#fff;text-align:center">
-      <!-- trocar para mesma aba -->
-      Para continuar, ative o JavaScript ou <a style="color:#fff;text-decoration:underline" href="https://presellemp.vercel.app/pagina1.html">clique aqui</a>.
+      To continue, enable JavaScript or <a style="color:#fff;text-decoration:underline" href="https://presellemp.vercel.app/pagina1.html">click here</a>.
     </div>
   </noscript>
 
@@ -146,11 +144,10 @@
       ['ctaSim','ctaNao'].forEach(id=>{
         const a = document.getElementById(id);
         if(!a) return;
-        a.removeAttribute('target');     // garante mesma aba
-        a.removeAttribute('rel');        // opcional
-        a.href = finalUrl;               // comportamento padrão do link (mesma aba)
+        a.removeAttribute('target');
+        a.removeAttribute('rel');
+        a.href = finalUrl;
 
-        // Se preferir forçar via JS (mesma aba):
         a.addEventListener('click', function(ev){
           ev.preventDefault();
           location.assign(finalUrl);
