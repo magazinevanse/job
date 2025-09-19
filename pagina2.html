@@ -83,13 +83,12 @@
     }
     /* iframe responsivo dentro da margem do card */
     .filebox iframe{
-      width:100%;           /* NÃO usar 100vw pra não estourar a margem do card */
-      height:70vh;          /* altura confortável e responsiva */
-      max-height:820px;     /* limite opcional em telas muito altas */
-      min-height:420px;     /* garante área útil mínima */
+      width:100%;
+      height:140vh;        /* DOBRO+ de altura para caber tudo */
+      min-height:900px;    /* garante área útil grande em telas baixas */
       display:block;
       border:none;
-      border-radius:10px;   /* acompanha o estilo do card */
+      border-radius:10px;
     }
 
     .security{
@@ -122,8 +121,8 @@
       .section{padding:14px}
       .filebox{padding:10px;border-radius:10px}
       .filebox iframe{
-        height:110vh;        /* um pouco menor pra caber melhor no mobile */
-        min-height:380px;
+        height:200vh;      /* MUITO mais alto no mobile */
+        min-height:1200px; /* garante que tudo apareça */
       }
     }
 
