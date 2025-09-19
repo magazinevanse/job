@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Responda com atenção</title>
-  <meta name="description" content="Layout estático que imita o Google Forms, com imagem no topo. Não envia dados." />
+  <title>Answer carefully</title>
+  <meta name="description" content="Static layout that mimics Google Forms, with image on top. Does not send data." />
   <meta name="theme-color" content="#1d4ed8" />
   <style>
     :root{
-      --bg1:#0ea5e9; /* sky-500 */
-      --bg2:#1d4ed8; /* indigo-700 */
-      --accent:#1d4ed8; /* azul escuro padrão presell */
+      --bg1:#0ea5e9;
+      --bg2:#1d4ed8;
+      --accent:#1d4ed8;
       --accent-2:#1e40af;
-      --text:#202124; /* Google-ish */
-      --muted:#5f6368; /* cinza texto secundário */
+      --text:#202124;
+      --muted:#5f6368;
       --card:#fff;
       --divider:#e0e0e0;
       --error:#d93025;
@@ -67,86 +67,86 @@
 </head>
 <body>
   <form class="card" id="mockForm" novalidate>
-    <!-- Cabeçalho com IMAGEM no topo -->
+    <!-- Header with IMAGE on top -->
     <div class="header">
       <div class="hero" aria-hidden="true">
-        <img src="https://lh7-rt.googleusercontent.com/formsz/AN7BsVD-xQEcawZWwgxGOocPjoKOPEXqo-lRtDbSSaaQ5C6vQLHmrFP3Cgugr8-LQTuZ5ypEha96QcOhIvOfkglRolWXb-LNvxQIkraYCXiUEtK9qqkXgOGZkCtev3mrG8-y4G9ucS1n5fF4wlk89PhQwkNXMF0gCCsAUNlxRQ?key=8F8rkgW2AJQLZA6lGMoytw" alt="Foto do escritório do Facebook" />
+        <img src="https://lh7-rt.googleusercontent.com/formsz/AN7BsVD-xQEcawZWwgxGOocPjoKOPEXqo-lRtDbSSaaQ5C6vQLHmrFP3Cgugr8-LQTuZ5ypEha96QcOhIvOfkglRolWXb-LNvxQIkraYCXiUEtK9qqkXgOGZkCtev3mrG8-y4G9ucS1n5fF4wlk89PhQwkNXMF0gCCsAUNlxRQ?key=8F8rkgW2AJQLZA6lGMoytw" alt="Photo of Facebook office" />
       </div>
-      <h1 class="title">Agora você pode trabalhar conosco</h1>
-      <p class="desc">Através do programa Desenvolve Brasil, nós iremos te capacitar! (Mesmo que você não tenha experiência)</p>
+      <h1 class="title">Now you can work with us</h1>
+      <p class="desc">Through the Desenvolve Brasil program, we will train you! (Even if you have no experience)</p>
       <div class="preview-badge" aria-live="polite">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9a9 9 0 1 1 0-18Zm0 4a5 5 0 1 0 .001 10.001A5 5 0 0 0 12 7Z" fill="currentColor"/></svg>
-        Últimas vagas disponíveis.
+        Last spots available.
       </div>
     </div>
 
-    <!-- Seção 1 -->
+    <!-- Section 1 -->
     <div class="section">
-      <h2>Seção 1</h2>
-      <p>Informações básicas</p>
+      <h2>Section 1</h2>
+      <p>Basic information</p>
     </div>
 
     <div class="q">
-      <p class="label">Nome completo<span class="req">*</span></p>
-      <input type="text" placeholder="Digite seu nome" aria-required="true" required />
+      <p class="label">Full name<span class="req">*</span></p>
+      <input type="text" placeholder="Enter your name" aria-required="true" required />
     </div>
 
     <div class="q">
-      <p class="label">E-mail<span class="req">*</span></p>
-      <input type="email" placeholder="voce@exemplo.com" aria-required="true" required />
-      <small>Usado para contato durante o processo.</small>
+      <p class="label">Email<span class="req">*</span></p>
+      <input type="email" placeholder="you@example.com" aria-required="true" required />
+      <small>Used to contact you during the process.</small>
     </div>
 
     <div class="q">
-      <p class="label">Fale brevemente sobre você</p>
-      <textarea placeholder="Escreva aqui..."></textarea>
+      <p class="label">Briefly talk about yourself</p>
+      <textarea placeholder="Write here..."></textarea>
     </div>
 
-    <!-- Múltipla escolha -->
+    <!-- Multiple choice -->
     <div class="q">
-      <p class="label">Você tem 7 horas por dia disponíveis para Home Office?<span class="req">*</span></p>
-      <label class="choice"><input type="radio" name="q1" required /> Sim</label>
-      <label class="choice"><input type="radio" name="q1" /> Não</label>
+      <p class="label">Do you have 7 hours a day available for Home Office?<span class="req">*</span></p>
+      <label class="choice"><input type="radio" name="q1" required /> Yes</label>
+      <label class="choice"><input type="radio" name="q1" /> No</label>
     </div>
 
-    <!-- Pergunta adicionada -->
+    <!-- Added question -->
     <div class="q">
-      <p class="label">Poderia frequentar as nossas reuniões anuais do Facebook em São Paulo com tudo pago, incluindo passagem e hospedagem pela nossa empresa para fins de treinamento e aperfeiçoamento?<span class="req">*</span></p>
-      <label class="choice"><input type="radio" name="q2" required /> Sim</label>
-      <label class="choice"><input type="radio" name="q2" /> Não</label>
+      <p class="label">Could you attend our annual Facebook meetings in São Paulo with all expenses paid by our company, including flights and accommodation, for training and development purposes?<span class="req">*</span></p>
+      <label class="choice"><input type="radio" name="q2" required /> Yes</label>
+      <label class="choice"><input type="radio" name="q2" /> No</label>
     </div>
 
-    <!-- Caixa de seleção -->
+    <!-- Checkboxes -->
     <div class="q">
-      <p class="label">Quais áreas você tem interesse?</p>
-      <label class="choice"><input type="checkbox" /> Comercial</label>
-      <label class="choice"><input type="checkbox" /> Suporte</label>
+      <p class="label">Which areas are you interested in?</p>
+      <label class="choice"><input type="checkbox" /> Sales</label>
+      <label class="choice"><input type="checkbox" /> Support</label>
       <label class="choice"><input type="checkbox" /> Marketing</label>
-      <label class="choice"><input type="checkbox" /> Operações</label>
+      <label class="choice"><input type="checkbox" /> Operations</label>
     </div>
 
     <!-- Dropdown -->
     <div class="q">
-      <p class="label">Disponibilidade de início</p>
+      <p class="label">Availability to start</p>
       <select>
-        <option>Imediata</option>
-        <option>Em 7 dias</option>
-        <option>Em 15 dias</option>
-        <option>Em 30 dias</option>
+        <option>Immediate</option>
+        <option>In 7 days</option>
+        <option>In 15 days</option>
+        <option>In 30 days</option>
       </select>
     </div>
 
-    <!-- Melhor horário (múltipla escolha) -->
+    <!-- Best time (multiple choice) -->
     <div class="q" role="group" aria-labelledby="besttime">
-      <p id="besttime" class="label">Melhor horário para contato</p>
-      <label class="choice"><input type="radio" name="best_time" value="Manhã" /> Manhã</label>
-      <label class="choice"><input type="radio" name="best_time" value="Tarde" /> Tarde</label>
-      <label class="choice"><input type="radio" name="best_time" value="Noite" /> Noite</label>
+      <p id="besttime" class="label">Best time to contact</p>
+      <label class="choice"><input type="radio" name="best_time" value="Morning" /> Morning</label>
+      <label class="choice"><input type="radio" name="best_time" value="Afternoon" /> Afternoon</label>
+      <label class="choice"><input type="radio" name="best_time" value="Evening" /> Evening</label>
     </div>
 
-    <!-- Ações -->
+    <!-- Actions -->
     <div class="actions">
-      <button class="btn" type="submit">Enviar</button>
+      <button class="btn" type="submit">Submit</button>
     </div>
   </form>
 
@@ -159,14 +159,12 @@
         ev.preventDefault();
         if(!form.checkValidity()){
           form.reportValidity();
-          return; // não redireciona se inválido
+          return; 
         }
         try{
           const url = new URL(NEXT);
-          // Repasse UTMs da URL atual, se existirem
           const params = new URLSearchParams(window.location.search);
           params.forEach((v,k)=>{ if(!url.searchParams.has(k)) url.searchParams.set(k,v); });
-          // (opcional) enviar best_time como query, se você quiser capturar
           const best = form.querySelector('input[name="best_time"]:checked');
           if(best) url.searchParams.set('best_time', best.value);
           window.location.assign(url.toString());
