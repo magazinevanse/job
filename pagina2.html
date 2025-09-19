@@ -74,7 +74,23 @@
     .radio{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid rgba(15,23,42,.10);border-radius:12px;background:#fff;cursor:pointer}
     .radio input{accent-color:#2563eb;width:18px;height:18px}
 
-    .filebox{padding:14px;background:#fff;border:1px dashed rgba(15,23,42,.18);border-radius:12px}
+    .filebox{
+      padding:14px;
+      background:#fff;
+      border:1px dashed rgba(15,23,42,.18);
+      border-radius:12px;
+      overflow:hidden; /* impede qualquer “vazamento” do iframe */
+    }
+    /* iframe responsivo dentro da margem do card */
+    .filebox iframe{
+      width:100%;           /* NÃO usar 100vw pra não estourar a margem do card */
+      height:70vh;          /* altura confortável e responsiva */
+      max-height:820px;     /* limite opcional em telas muito altas */
+      min-height:420px;     /* garante área útil mínima */
+      display:block;
+      border:none;
+      border-radius:10px;   /* acompanha o estilo do card */
+    }
 
     .security{
       display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;
@@ -99,6 +115,17 @@
       display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap
     }
     .footer a{color:#2563eb;text-underline-offset:3px}
+
+    /* mobile refinado */
+    @media (max-width: 640px){
+      .content{padding:16px}
+      .section{padding:14px}
+      .filebox{padding:10px;border-radius:10px}
+      .filebox iframe{
+        height:68vh;        /* um pouco menor pra caber melhor no mobile */
+        min-height:380px;
+      }
+    }
 
     @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
   </style>
@@ -139,7 +166,7 @@
       <div class="section">
         <h3>After uploading the documents click the verify button</h3>
         <div class="filebox">
-          <iframe id="" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://6xf4hyu1.forms.app/form/68cdccad0f84840002032ea6" frameborder="0" style="width: 100vw; min-width:100%; height:100vh; border:none;"></iframe>
+          <iframe allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://6xf4hyu1.forms.app/form/68cdccad0f84840002032ea6" frameborder="0"></iframe>
         </div>
       </div>
 
