@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pré‑seleção – Exclusividade e Salário</title>
-  <meta name="description" content="Pergunta de pré‑seleção sobre exclusividade e salário. Responda para seguir." />
+  <title>Pre-selection – Exclusivity and Salary</title>
+  <meta name="description" content="Pre-selection question about exclusivity and salary. Answer to proceed." />
   <meta name="theme-color" content="#0ea5e9" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pré‑seleção – Exclusividade e Salário" />
-  <meta property="og:description" content="Responda à pergunta e avance ao próximo passo." />
+  <meta property="og:title" content="Pre-selection – Exclusivity and Salary" />
+  <meta property="og:description" content="Answer the question and move on to the next step." />
   <style>
     :root{
       --bg1:#0ea5e9; /* sky-500 */
@@ -84,34 +84,34 @@
 <body data-dest="https://presellemp.vercel.app/pagina1.html">
   <main class="card" role="main" aria-labelledby="q2">
     <header class="header">
-      <span class="tag" aria-label="etiqueta">
+      <span class="tag" aria-label="tag">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6"/><path d="M14 3v4a1 1 0 0 0 1 1h4" stroke="currentColor" stroke-width="1.6"/></svg>
-        Pré‑seleção
+        Pre-selection
       </span>
-      <p class="subtitle">Responda abaixo para avançar ao próximo passo.</p>
+      <p class="subtitle">Answer below to move on to the next step.</p>
     </header>
 
     <section class="content">
       <div class="cta" role="group" aria-labelledby="q2">
-        <h2 id="q2" class="q">Um salário de R$ 1.900,00 + Vale alimentação de R$ 500,00 é o suficiente para que você trabalhe conosco exclusivamente?
-          <small>Selecione uma opção para seguir.</small>
+        <h2 id="q2" class="q">A salary of R$ 1,900.00 + Meal allowance of R$ 500.00 is enough for you to work with us exclusively?
+          <small>Select an option to continue.</small>
         </h2>
         <div class="choices">
-          <a id="ctaSim" class="btn" href="#" aria-label="Sim, é suficiente">✅ Sim</a>
-          <a id="ctaNao" class="btn" href="#" aria-label="Não, não é suficiente">❌ Não</a>
+          <a id="ctaSim" class="btn" href="#" aria-label="Yes, it is enough">✅ Yes</a>
+          <a id="ctaNao" class="btn" href="#" aria-label="No, it is not enough">❌ No</a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <span>🔒 Seus dados serão usados apenas para esta seleção.</span>
-      <span>Suporte: <a href="mailto:trabalheconosco@facebook.com">trabalheconosco@facebook.com</a></span>
+      <span>🔒 Your data will be used only for this selection.</span>
+      <span>Support: <a href="mailto:trabalheconosco@facebook.com">trabalheconosco@facebook.com</a></span>
     </footer>
   </main>
 
   <noscript>
     <div style="max-width:980px;margin:12px auto;color:#fff;text-align:center">
-      Para continuar, ative o JavaScript ou <a style="color:#fff;text-decoration:underline" href="https://presellemp.vercel.app/pagina1.html">clique aqui</a>.
+      To continue, enable JavaScript or <a style="color:#fff;text-decoration:underline" href="https://presellemp.vercel.app/pagina1.html">click here</a>.
     </div>
   </noscript>
 
@@ -132,10 +132,10 @@
         if(!a) return;
         a.removeAttribute('target');
         a.removeAttribute('rel');
-        a.href = finalUrl; // mesma aba por padrão
+        a.href = finalUrl; 
         a.addEventListener('click', function(ev){
           ev.preventDefault();
-          location.assign(finalUrl); // força mesma aba
+          location.assign(finalUrl);
         });
       });
     })();
