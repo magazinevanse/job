@@ -1,159 +1,173 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pre-selection – Question 01</title>
-  <meta name="description" content="Pre-selection page for job interview. Answer to proceed to the form." />
-  <meta name="theme-color" content="#0ea5e9" />
-  <!-- Open Graph for Facebook preview -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pre-selection – Job Interview" />
-  <meta property="og:description" content="Answer the question to proceed to the official form." />
-  <meta property="og:image" content="" />
-  <meta property="og:url" content="" />
-  <style>
-    :root{
-      --bg1:#0ea5e9; /* sky-500 */
-      --bg2:#1d4ed8; /* indigo-700 */
-      --card:#ffffff;
-      --text:#0f172a; /* slate-900 */
-      --muted:#475569; /* slate-600 */
-      --ring:#93c5fd; /* blue-300 */
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Ubuntu,"Noto Sans",sans-serif;
-      color:var(--text);
-      background:linear-gradient(160deg,var(--bg1),var(--bg2)) fixed;
-      display:grid;
-      place-items:center;
-      padding:clamp(12px,2vw,28px);
-    }
-    .card{
-      width:min(100%, 980px);
-      background:var(--card);
-      border-radius:20px;
-      box-shadow:0 10px 30px rgba(2,6,23,.25);
-      overflow:hidden;
-      border:1px solid rgba(15,23,42,.06);
-      animation:pop .35s ease;
-    }
-    @keyframes pop{from{transform:translateY(8px);opacity:.0}to{transform:translateY(0);opacity:1}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Book: Geld verdienen mit Oster-Eiern</title>
 
-    .header{
-      background:linear-gradient(135deg, #38bdf8, #2563eb);
-      color:white;
-      padding:32px 28px 24px;
-    }
-    .tag{
-      display:inline-flex;align-items:center;gap:8px;
-      background:rgba(255,255,255,.15);
-      border:1px solid rgba(255,255,255,.25);
-      padding:6px 10px;border-radius:999px;font-size:12px;letter-spacing:.2px
-    }
-    .title{margin:12px 0 6px;font-weight:800;line-height:1.1;font-size: clamp(22px, 4.5vw, 34px)}
-    .subtitle{margin:0;opacity:.95;font-weight:500}
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+}
 
-    .content{padding:22px 22px 26px}
-    .helper{
-      display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:14px
-    }
-    .helper p{margin:0;color:var(--muted);font-size:14px}
-    .btn{
-      appearance:none;border:0;cursor:pointer;
-      background:#1d4ed8;color:#fff;border-radius:10px;
-      padding:12px 18px;font-weight:800;font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:8px
-    }
-    .btn:hover{filter:brightness(1.05)}
-    .btn:focus-visible{outline:3px solid var(--ring);outline-offset:2px}
+header {
+    background: linear-gradient(90deg, #ff7a18, #ffb347);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
 
-    .cta{
-      border:1px solid rgba(15,23,42,.08);
-      border-radius:14px; overflow:hidden;
-      box-shadow:0 6px 20px rgba(2,6,23,.10);
-      background:#f8fafc;
-      padding:28px;
-      text-align:center;
-    }
-    .q{font-size: clamp(18px, 3.6vw, 26px);font-weight:900;line-height:1.2;margin:0 0 18px}
-    .q small{display:block;margin-top:6px;color:var(--muted);font-weight:600}
-    .choices{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
 
-    .footer{
-      padding:16px 22px 24px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap
-    }
-    .footer a{color:#2563eb;text-underline-offset:3px}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
 
-    @media (prefers-reduced-motion: reduce){
-      *{animation:none !important;transition:none !important}
-    }
-  </style>
+.section {
+    margin-bottom: 40px;
+}
+
+.cta {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature-box {
+    flex: 1 1 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 36px;
+    color: #e63946;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+</style>
 </head>
-<body data-dest="https://job-eight-snowy.vercel.app/presell2.html">
-  <main class="card" role="main" aria-labelledby="q1">
-    <header class="header">
-      <span class="tag" aria-label="tag">
-        <!-- resume icon -->
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.6"/><path d="M14 3v4a1 1 0 0 0 1 1h4" stroke="currentColor" stroke-width="1.6"/></svg>
-        Pre-selection
-      </span>
-      <p class="subtitle">Answer below to proceed to the official form.</p>
-    </header>
 
-    <section class="content">
-      <div class="cta" role="group" aria-labelledby="q1">
-        <h2 id="q1" class="q">Do you have <u>7 hours a day</u> to dedicate to our company working from home?<small>Select an option to continue to the form.</small></h2>
-        <div class="choices">
-          <a id="ctaSim" class="btn" href="#" aria-label="Yes, I have 7 hours a day">✅ Yes</a>
-          <a id="ctaNao" class="btn" href="#" aria-label="No, I don't have 7 hours a day">❌ No</a>
-        </div>
-      </div>
-    </section>
+<body>
 
-    <footer class="footer">
-      <span>🔒 Your data will be used only for this selection.</span>
-      <span>Support: <a href="mailto:trabalheconosco@facebook.com">trabalheconosco@facebook.com</a></span>
-    </footer>
-  </main>
+<header>
+    <h1>Verdiene Geld mit Oster-Eiern 🍫🐰</h1>
+    <p>Der komplette Leitfaden für Anfänger und Profis</p>
+</header>
 
-  <noscript>
-    <div style="max-width:980px;margin:12px auto;color:#fff;text-align:center">
-      To continue, enable JavaScript or <a style="color:#fff;text-decoration:underline" href="https://presellemp.vercel.app/pagina1.html">click here</a>.
+<div class="container">
+
+    <div class="section">
+        <img src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25" alt="Oster Schokolade">
     </div>
-  </noscript>
 
-  <script>
-    (function(){
-      const destBase = document.body.getAttribute('data-dest');
-      function makeFinalUrl() {
-        try{
-          const url = new URL(destBase);
-          const paramsHere = new URLSearchParams(window.location.search);
-          paramsHere.forEach((v,k)=>{ if(!url.searchParams.has(k)) url.searchParams.set(k,v); });
-          return url.toString();
-        }catch(e){
-          return destBase;
-        }
-      }
+    <div class="section">
+        <h2>💰 Was wirst du lernen?</h2>
+        <div class="features">
+            <div class="feature-box">
+                <h3>Geheime Rezepte</h3>
+                <p>Perfekte Oster-Eier mit professionellem Geschmack herstellen.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Marketing Strategien</h3>
+                <p>Wie du deine Produkte schnell verkaufst – sogar ohne Erfahrung.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Hoher Gewinn</h3>
+                <p>Lerne, wie du mit wenig Investition viel Geld verdienst.</p>
+            </div>
+        </div>
+    </div>
 
-      const finalUrl = makeFinalUrl();
-      ['ctaSim','ctaNao'].forEach(id=>{
-        const a = document.getElementById(id);
-        if(!a) return;
-        a.removeAttribute('target');
-        a.removeAttribute('rel');
-        a.href = finalUrl;
+    <div class="section">
+        <img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e" alt="Schokolade Eier">
+    </div>
 
-        a.addEventListener('click', function(ev){
-          ev.preventDefault();
-          location.assign(finalUrl);
-        });
-      });
-    })();
-  </script>
+    <div class="section">
+        <h2>🚀 Für wen ist dieses E-Book?</h2>
+        <ul>
+            <li>Menschen, die extra Geld verdienen wollen</li>
+            <li>Anfänger ohne Erfahrung</li>
+            <li>Verkäufer, die ihren Umsatz steigern wollen</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📦 Was bekommst du?</h2>
+        <ul>
+            <li>Komplettes E-Book (PDF)</li>
+            <li>Exklusive Rezepte</li>
+            <li>Verkaufsstrategien</li>
+            <li>Bonus Tipps für Social Media</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <p class="price">Nur 97,90€</p>
+    </div>
+
+    <div class="cta">
+        <a class="button" href="https://buy.stripe.com/4gMeVd6DK4fcdC4dkD6Ri00">
+            Jetzt kaufen
+        </a>
+    </div>
+
+    <div class="section">
+        <h2>🔥 Warum jetzt kaufen?</h2>
+        <p>Ostern ist eine der profitabelsten Zeiten im Jahr. Nutze diese Chance und starte noch heute dein eigenes Geschäft!</p>
+    </div>
+
+    <div class="section">
+        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac" alt="Erfolg Geld">
+    </div>
+
+</div>
+
+<div class="footer">
+    © 2026 - Alle Rechte vorbehalten
+</div>
+
 </body>
 </html>
